@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<il class="itmer it"></il>
+			<il class="itmer it itmer2"></il>
+			<il class="itmer it"></il>
+			<il class="itmer it itmer2"></il>
+			<il class="itmer it"></il>
+			<il class="it"></il>
+		</ul>
+	</body>
+</html>
+<script>
+	var txt="jsdfikjfdusjsdf";
+	//var re=new RegExp("j");
+//	var re=/j/
+//	var txt="g ";
+//	var re=/[.d ]/;//任意都可以
+//	alert(re.test(txt))
+//	var txt="bn";
+//	var re=/gb|n/;//  为true  的  有 gb gn bn n
+//	alert(re.test(txt))
+//	var txt="g bb";
+//	var re=/g|b{2}/;//大括号  里面填数字 表示 括号前一个的 数量
+//	alert(re.test(txt))
+//	var txt="g ";
+//	var re=/(g)(g)/;
+//	alert(re.test(txt))
+	//^ 放在[]中是删除 后面的元素
+	//^  放在其他地方后面更的字母  意思是  匹配的 元素 首写
+//	var txt="asgt";
+//	var re=/^a[^0-9]{2,4}/;
+//	alert(re.test(txt))
+	
+//	var txt="A55BDBDBDc";
+//	var re=/^[A-Z]\d+(bd|er){2,5}(c)$/i;
+//	alert(re.test(txt))
+//	var txt="dfgdfg878 sdf7878 gdff8778";
+//	var re=/^(df)|8$/g;
+//	var arr=txt.match(re);
+//	alert(arr)
+	//__________________
+	//用法
+	function getByClass(oParent,className){
+		//先判断是否支持高级标签
+		if(document.getElementsByClassName){
+			return oParent.getElementsByClassName(className)
+		}else{
+			var arr;
+			var re=new RegExp("\\b'+className+"\\b'");
+			var elms=oParent.getElementsByTagName("*");
+			for(var i=0;i<elms.length;i++){
+				if(re.test(elms[i].className){
+					arr.push(elms[i];
+				}
+				
+			};
+			return arr;
+		}
+	
+	}
+	var ali=getByClass(document,('itme2')
+</script>
